@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 1. Основы языка JavaScript</title>
+		<script type="text/javascript">
+
+		function convertTemp() {
+				/*1. Задать температуру в градусах по Цельсию. 
+				Вывести в alert соответствующую температуру в градусах по Фаренгейту. 
+				Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию
+				*/
+
+				let Tc = +prompt('Задайте температуру в градусах по Цельсию:');
+				let Tf = (9 / 5) * Tc + 32
+				alert(Tf + ' F');
+		}
+
+		function fromNameToAdmin() {
+				/* 2. Объявить две переменные: admin и name. 
+				Записать в name строку "Василий"; Скопировать значение из name в admin. 
+				
+				alert(Вывести admin (должно вывестись «Василий»).*/
+
+				let name = "Василий";
+				let admin = name;
+				alert('Admin = ' + admin);
+		}
+
+		function addVariables() {
+				/* 3. Чему будет равно JS-выражение 1000 + "108"?*/
+
+				let number = 1000;
+				let type_number = typeof(number)
+				let string = "108";
+				let type_str = typeof(string)
+				add = number + string
+				alert(`Тип 1000 = ${type_number}, тип "108 = "${type_str}, результат сложения  1000 + "108" = ${add}`);
+		}
+
+
+	</script>
+</head>
+<body>
+	<li><a href="#" onclick="convertTemp();">Задание 1. Конвертируем температуру</a></li>
+	<li><a href="#" onclick="fromNameToAdmin();">Задание 2. Копирование значения переменной</a></li>
+	<li><a href="#" onclick="addVariables();">Задание 3. Операция сложения</a></li>
+
+	<div>
+		<li><a>Задание 4. Атрибуты тега script (async и defer).</a></li>
+		<p>Оба атрибута не блокируют отрисовку страницы.</p>
+		<p>Работаем с внешними скриптами.</p>
+		<p>Если используем атрибут async скрипты загружаются(выполняются) и ни от чего не зависят, могут сработать до полной загрузки страницы.</p>
+		<p>Если используем атрибут defer, то скрипты выполняются после того, как страница загружена(нужен построенный DOM).</p>
+	</div>
+
+</body>
+</html>
