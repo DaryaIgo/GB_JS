@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 2. Основные операторы JavaScript</title>
+</head>
+<body>
+	<hr>
+
+		<li><a>Задание 1.</a></li>
+
+	<p>
+		Дан код:
+		<br>
+		<br>var a = 1, b = 1, c, d;
+		<br>
+		<br>c = ++a; alert(c); // 2
+		<br><i>Операция инкремента, префиксная форма, прибавляет 1 и возвращает значение операнда.</i>
+		<br>
+		<br>d = b++; alert(d); // 1
+		<br><i>Постфикс, возвращается значение, которое было до выполнения инкремента.</i>
+		<br>
+		<br>c = (2+ ++a); alert(c);	// 5
+		<br><i>Сначала выполняется инкремент префикс(выше), потом еще раз увеличение a=2+1, а потом уже с новым значением "a" другие операции.</i>
+		<br>
+		<br>d = (2+ b++); alert(d);	// 4
+		<br><i>Сначала выполняется операция инкремент постфикс b=b+1, но сложение происходит с предыдущим значением "b"</i>
+		<br>
+		<br>alert(a); // 3
+		<br><i>Значение "a" увеличивалось в предыдущих операциях инкремента 2 раза на 1.</i>
+		<br>
+		<br>alert(b); // 3
+		<br><i>Значение "b" увеличивалось в предыдущих операциях инкремента 2 раза на 1.</i>
+		<br>
+	</p>
+
+	<hr>
+
+	<hr>
+		<li><a>Задание 2.</a></li>
+
+	<p>
+		Чему будет равен x в примере ниже?
+		<br>
+		<br>var a = 2;
+		<br>var x = 1 + (a *= 2);
+		<br>
+		<br><i>Ответ: 5.</i>
+		<br>
+	</p>
+	<hr>
+
+	<hr>
+		<li><a>Задание 3.</a></li>
+
+	<p>
+		Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. 
+		<p>Затем написать скрипт, который работает по следующему принципу:</p>
+		<li><a>если a и b положительные, вывести их разность;</a></li>
+		<li><a>если а и b отрицательные, вывести их произведение;</a></li>
+		<li><a>если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</a></li>
+
+		<script type="text/javascript">
+			let a = 1;
+			let b = 10;
+
+			if (a > 0 && b > 0){
+				sign = '-'
+				result = a - b;
+				alert(`Результат работы задачи №3:  ${a} ${sign} ${b}  = ${xresult}`);
+			} else if (a < 0 && b < 0){
+				sign = '*'
+				result = a * b;
+				alert(`Результат работы задачи №3:  ${a} ${sign} ${b}  = ${xresult}`);
+			} else if (a > 0 && b < 0 || a < 0 && b > 0){
+				sign = '+'
+				result = a + b
+				alert(`Результат работы задачи №3:  ${a} ${sign} ${b}  = ${xresult}`);
+			}
+		</script>
+	</p>
+	<hr>
+		<li><a>Задание 4.</a></li>
+
+	<p>
+		Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+		
+	</p>
+		<script type="text/javascript">
+			let a = 4;
+
+			switch (a) {
+				case 0:
+					alert('0');
+					break;
+				case 1: 
+					alert('1');
+					break;
+				case 2: 
+					alert('2');
+					break;
+				case 3:
+					alert('3');
+					break;
+				case 4:
+					alert('4');
+					break;
+				case 5:
+					alert('5');
+					break;
+				case 6:
+					alert('6');
+					break;
+				case 7:
+					alert('7');
+					break;
+				case 8:
+					alert('8');
+					break;
+				case 9:
+					alert('9');
+					break;
+				case 10:
+					alert('10');
+					break;
+				case 11:
+					alert('11');
+					break;
+				case 12:
+					alert('12');
+					break;
+				case 13:
+					alert('13');
+					break;
+				case 14:
+					alert('14');
+					break;
+				case 15:
+					alert('15');
+					break;
+			}
+					
+		</script>
+	<hr>
+	<hr>
+		<li><a>Задание 5.</a></li>
+
+	<p>
+		Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+		
+		<script type="text/javascript">
+
+		function plus(a, b) {
+				return a + b
+		}
+
+		function minus(a, b) {
+				return a - b
+		}
+
+		function multi(a, b) {
+				return a * b
+		}
+		function div(a, b) {
+				return a / b
+		}
+		</script>
+
+	<hr>
+	<hr>
+		<li><a>Задание 6.</a></li>
+
+	<p>
+		Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+		где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+		В зависимости от переданного значения операции выполнить одну из арифметических
+		операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
+
+		<script type="text/javascript">
+
+		function mathOperation(arg1, arg2, operation){
+    		switch(operation){
+       			case 'add':
+           			return arg1 + arg2;
+           			break;
+       			case 'minus':
+           			return arg1 - arg2;
+            		break;
+        		case 'div':
+                    return arg1 / arg2;
+            		break;
+       			case 'multi':
+           			return arg1 * arg2;
+            		break;
+   				}
+		}
+
+		</script>
+	</p>
+	<hr>
+
+</body>
+</html>
