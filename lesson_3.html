@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 1. Основы языка JavaScript</title>
+		<script type="text/javascript">
+
+		function simpleNum() {
+			let n = 0;
+
+			while (n <= 100) {
+				let flag = true;
+
+				for (let i = 2; i < n; i++) {
+					if (n%i === 0) {
+						flag = false;
+						break;
+					}
+				}
+				if (flag) {
+					console.log(n);
+				}
+				n++;
+			}
+		}
+
+        function countBasketPrice(basket) {
+            let funBasketPrice = 0;
+            for (let prod of basket){
+                funBasketPrice += prod.price;
+            }
+            return funBasketPrice;
+        }		
+
+		</script>
+</head>
+<body>
+	<hr>
+	<div>
+		<li><a href="#" onclick="simpleNum();">Задание 1.</a></li>
+		<p>С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</p>
+	</div>
+	<hr>
+
+	<hr>
+	<div>
+		<li><a href="#" onclick="countBasketPrice()";>Задание 2.</a></li>
+		<p>Предположим, есть сущность корзины. 
+			Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. 
+			Товары в корзине хранятся в массиве. 
+			Задачи:
+			a) Организовать такой массив для хранения товаров в корзине;
+			b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.</p>
+
+		<script type="text/javascript">
+
+			let basket = [
+			            {
+			                product: "pen",
+			                price: 10
+			            },
+			            {
+			                product: "pencil",
+			                price: 11
+			            }
+			        ];
+
+        console.log("Стоимость корзины: " + countBasketPrice(basket) + " у.е.");
+
+		</script>
+	</div>
+	<hr>
+
+	<hr>
+	<div>
+		<li><a>Задание 3. Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+			for(…){// здесь пусто} </a></li>
+		<script type="text/javascript">
+			for (let i = 0; i < 10; console.log(i++)) {}
+		</script>
+	</div>
+	<hr>
+
+	<hr>
+	<div>
+		<li><a>Задание 4. Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+		<li><a>x</a></li>
+		<li><a>xx</a></li>
+		<li><a>xxx</a></li>
+		<li><a>xxxx</a></li>
+		<li><a>xxxxx</a></li>
+		<script type="text/javascript">
+			let row = 'x';
+			for (let i = 0; i < 20; i++){
+				console.log(row);
+				row += 'x';
+        	}
+		</script>
+	</div>
+	<hr>
+
+</body>
+</html>
