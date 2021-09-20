@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Урок 4. Объекты в JavaScript </title>
+
+	<script type="text/javascript">
+
+	function convNumToObj() {
+		var num = +prompt('Введите число: ');
+
+		var digit = {
+			hunderts: 0,
+			tens: 0,
+			units: 0
+		};
+
+		if (num < 0 || num > 999 || typeof num !== "number"){
+			alert("Повторите попытку ввода, условия ввода не выполнены!");
+		} else {
+			digit.units = Math.floor(num % 10);
+			digit.tens = Math.floor(num / 10 % 10);
+			digit.hunderts = num / 100 % 10
+		}
+
+		console.log(digit);
+	}
+
+	</script>
+
+	<!-- Первая часть задания 2-->
+
+	<script>
+
+
+        function countBasketPrice(basket) {
+            let funBasketPrice = 0;
+
+            for (let prod of basket){
+            	funBasketPrice += prod.price;
+            }
+
+            return funBasketPrice;
+        }
+	
+	</script>
+
+</head>
+<body>
+	<li><a href="#" onclick="convNumToObj()";>Задание 1.</a></li>
+
+	<!-- Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы должны получить на выходе объект, в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 мы должны получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.-->
+
+	<li><a href="#" onclick="countBasketPrice()";>Задание 2.</a></li>
+
+	<!-- Продолжить работу с интернет-магазином:
+		В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+		Реализуйте такие объекты.
+		Перенести функционал подсчета корзины на объектно-ориентированную базу.-->
+
+		<script type="text/javascript">
+
+			class Product {
+				init(name, price) {
+					this.name = name;
+					this.price = price;
+				}
+
+				addProdInBasket(basket, name, price) {
+					basket.push({
+						product: name,
+						price: price
+						});
+				}
+
+			}
+
+			let product = new Product('modile', 15);
+
+			let basket = [
+			            {
+			                product: "pen",
+			                price: 10
+			            },
+			            {
+			                product: "pencil",
+			                price: 11
+			            }
+			        ];
+
+			product.addProdInBasket(basket, 'paper', 9)
+
+
+       		console.log("Стоимость корзины: " + countBasketPrice(basket) + " у.е.");
+
+		</script>		
+
+
+</body>
+</html>
