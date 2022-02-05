@@ -1,0 +1,27 @@
+body {
+	background-color: #5f60a8;
+}
+
+h1 {
+	color: #26345a;
+	text-align: center;
+}
+
+h2 {
+	color: #b096fa;
+	
+}
+
+.header-bg {
+	background-color: #ffd8f4;
+	margin-top: 0;
+	padding: 40px 40px 40 px 40px;
+}
+
+.taskone, .tasktwo, .taskthree, .taskfour {
+	width: 40em;
+	border: 1px solid #333;
+	box-shadow: 8px 8px 5px #444;
+	padding: 8px 12px;
+	background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
