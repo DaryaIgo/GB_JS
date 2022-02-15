@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="stuff_style.css" rel="stylesheet">
+	<script defer type="text/javascript" src="lesson_5.js" defer></script>
+	<title>JavaScript</title>
+</head>
+<body>
+	<div class="header-bg">
+		<header>
+			<h1>Домашнее задание 5</h1>
+		</header>
+	</div>
+	<ul>
+		<li><a href="index.html">Основная страница</a></li>
+		<li><a href="hw1.html">ДЗ 1</a></li>
+		<li><a href="hw2.html">ДЗ 2</a></li>
+		<li><a href="hw3.html">ДЗ 3</a></li>
+		<li><a href="hw4.html">ДЗ 4</a></li>
+		<li><a href="hw5.html">ДЗ 5</a></li>
+	</ul>
+	<h2>Задание 1</h2>
+	<div class="taskone">
+		<p>Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по своему желанию.</p>
+		<p>Доска должна быть разлинована соответствующим образом, т.е. чередовать черные и белые ячейки.</p>
+		<p>Строки должны нумероваться числами от 1 до 8, столбцы – латинскими буквами A, B, C, D, E, F, G, H. (использовать createElement / appendChild)</p>
+	</div>
+
+	<table id="field">
+	</table>
+
+	<h2>Задание 2</h2>
+	<div class="tasktwo">
+		<p>Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре. </p>
+		<p>Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS:</p>
+		<ul>
+		<li>Пустая корзина должна выводить строку «Корзина пуста»;</li>
+		<li>Наполненная должна выводить «В корзине: n товаров на сумму m рублей».</li>
+		</ul>
+	</div>
+
+	<div class="prodBasket">
+	</div>
+
+	<div id="catalog">
+	</div>
+	
+	<h2>Задание 3*</h2>
+	<div class="taskthree">
+	<p>Сделать так, чтобы товары в каталоге выводились при помощи JS:</p>
+	<ul>
+		<li>Создать массив товаров (сущность Product);</li>
+		<li>При загрузке страницы на базе данного массива генерировать вывод из него. HTML-код должен содержать только div id=”catalog” без вложенного кода. Весь вид каталога генерируется JS.</li>
+	</ul>
+	</div>
+
+</body>
+</html>
