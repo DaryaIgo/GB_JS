@@ -1,0 +1,89 @@
+body {
+	background-color: #5f60a8;
+}
+
+h1 {
+	color: #26345a;
+	text-align: center;
+}
+
+h2 {
+	color: #b096fa;
+	
+}
+
+.header-bg {
+	background-color: #ffd8f4;
+	margin-top: 0;
+	padding: 40px 40px 40 px 40px;
+}
+
+.taskone, .tasktwo, .taskthree, .taskfour {
+	width: 40em;
+	border: 1px solid #333;
+	box-shadow: 8px 8px 5px #444;
+	padding: 8px 12px;
+	background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+.main {
+	min-width: 702px;
+}
+
+.products {
+	float: left;
+	min-width: 500px;
+	min-height: 100px;
+	background-color: rgba(0, 213, 255, 0.349);
+	border: 2px solid rgb(45, 0, 248);
+}
+
+.product {
+	min-height: 100px;
+	border-bottom: 1px solid gray;
+}
+
+.product > div {
+	text-align: center;
+}
+
+.product .name {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.product .discription {
+	min-height: 40px;
+}
+
+.product .buyButton {
+	font-size: 20px;
+	background-color: rgb(205, 213, 218);
+}
+
+.product .buyButton:hover {
+	background-color: rgb(30, 255, 0);
+}
+
+.basket {
+	float: right;
+	min-width: 300px;
+	min-height: 100px;
+	background-color: rgba(179, 192, 228, 0.151);
+	border: 1px solid rgba(128, 128, 128, 0.575);
+}
+
+.buy {
+	min-height: 20px;
+	border-bottom: 1px solid gray;
+	text-align: center;
+	font-weight: bold;
+}
+
+.buy:nth-child(2) {
+	border-top: 1px solid gray;
+}
+
+.basket h2 {
+	text-align: center;
+}
